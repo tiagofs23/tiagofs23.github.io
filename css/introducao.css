@@ -1,0 +1,77 @@
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 100px;
+  margin: 30px 0;
+}
+
+.introducao-text {
+  position: relative;
+}
+
+.introducao-text h1 {
+  font-size: 4.375rem;
+}
+
+.introducao-text h1::before {
+  content: "";
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  display: block;
+  top: -10px;
+  left: -45px;
+  z-index: -1;
+}
+
+.introducao-text p {
+  font-size: 1.25rem;
+  padding-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .introducao-text h1 {
+    font-size: 3.125rem;
+  }
+
+  .introducao-text h1::before {
+    top: -20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .introducao {
+    gap: 50px;
+  }
+
+  .introducao-text h1 {
+    font-size: 2.1875rem;
+  }
+
+  .introducao-text h1::before {
+    width: 30px;
+    height: 15px;
+    top: -15px;
+    left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+
+  .introducao-cover {
+    display: none;
+  }
+
+  .introducao-text {
+    justify-items: center;
+  }
+
+  .introducao-text h1::before {
+    display: none;
+  }
+}
